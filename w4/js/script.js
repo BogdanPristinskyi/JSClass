@@ -64,14 +64,21 @@ return -1
 }
 showArray();
 
-function myFancyList (){
+function myFancyList1 (){
   let text = '';
   for(let i = 0; i < myArray.length; i++){
   text += '<li>' + myArray[i] + '</li>';
-  console.log(text);
   console.log(text);
   }
 document.querySelector('#myFancyList')
    .innerHTML = text;
 
+}
+function myFancyList() {
+let text ='';
+myArray.forEach(function(item){
+text +='<li>'  + item + '</li>'
+});
+document.querySelector('#myFancyList')
+   .innerHTML = text;
 }
